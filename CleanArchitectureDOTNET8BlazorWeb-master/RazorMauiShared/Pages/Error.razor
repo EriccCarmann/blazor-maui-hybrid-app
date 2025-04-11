@@ -1,6 +1,6 @@
 ﻿@page "/Error"
 @using System.Diagnostics
-@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore
 
 <PageTitle>Error</PageTitle>
 
@@ -26,6 +26,17 @@
 </p>
 
 @code{
+    /// <summary>
+    /// I NEED TO FING A WAY 
+    /// TO USE HTTP WITH MAUI 
+    /// OR SEPARATE LOGIG FROM PAGES 
+    ///  SO THE SCRIPTS WOULD WORK ON BOTH TYPES OF APPS
+    /// </summary>
+
+    /// YOU CAN TRY TO MAKE
+    /// THE WEB SIDE THAT HANDELS WEB REQUESTS
+    /// AND MAUI SIDE THAT JUST ACCESSES IT
+
     [CascadingParameter]
     private HttpContext? HttpContext { get; set; }
 
@@ -35,3 +46,5 @@
     protected override void OnInitialized() =>
         RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
 }
+
+    
