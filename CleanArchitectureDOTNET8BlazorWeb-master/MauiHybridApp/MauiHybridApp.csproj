@@ -67,5 +67,4 @@
     <ItemGroup>
       <ProjectReference Include="..\RazorMauiShared\RazorMauiShared.csproj" />
     </ItemGroup>
-
 </Project>

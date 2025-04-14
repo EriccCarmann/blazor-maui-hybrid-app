@@ -23,7 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanBlazorWeb\CleanBlazorWeb.Client\CleanBlazorWeb.Client.csproj" PrivateAssets="all" ExcludeAssets="runtime" />
+    <ProjectReference Include="..\CleanBlazorWeb\CleanBlazorWeb.Client\CleanBlazorWeb.Client.csproj" 
+					  PrivateAssets="all" 
+					  ExcludeAssets="runtime" />
   </ItemGroup>
 
 </Project>
