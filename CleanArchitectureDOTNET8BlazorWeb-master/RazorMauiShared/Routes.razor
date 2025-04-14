@@ -10,12 +10,11 @@
         }
         else
         {
-             <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
-     @*        <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
+            <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
             <NotAuthorized>
                  <RedirectToLogin /> 
             </NotAuthorized>
-            </AuthorizeRouteView> *@
+            </AuthorizeRouteView>
         }
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>
