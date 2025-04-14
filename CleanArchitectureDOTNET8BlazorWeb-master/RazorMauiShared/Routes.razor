@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Authorization    
-@* @using CleanBlazorWeb.Client *@
+@using CleanBlazorWeb.Client
 
-<Router AppAssembly="typeof(Layout.MainLayout).Assembly"> @*  AdditionalAssemblies="new[] { typeof(CleanBlazorWeb.Client._Imports).Assembly }" *@
+<Router AppAssembly="typeof(Layout.MainLayout).Assembly" AdditionalAssemblies="new[] { typeof(CleanBlazorWeb.Client._Imports).Assembly }"> @*   *@
     <Found Context="routeData">
         @if (IsMobile)
         {
@@ -10,11 +10,12 @@
         }
         else
         {
-            <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
+             <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+     @*        <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
             <NotAuthorized>
-                @* <RedirectToLogin /> *@
+                 <RedirectToLogin /> 
             </NotAuthorized>
-            </AuthorizeRouteView>
+            </AuthorizeRouteView> *@
         }
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>

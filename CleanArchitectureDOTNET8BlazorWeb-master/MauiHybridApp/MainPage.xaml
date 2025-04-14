@@ -4,11 +4,9 @@
              xmlns:local="clr-namespace:MauiHybridApp"
              xmlns:shared="clr-namespace:RazorMauiShared;assembly=RazorMauiShared"
              x:Class="MauiHybridApp.MainPage">
-
     <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
         <BlazorWebView.RootComponents>
             <RootComponent Selector="#app" ComponentType="{x:Type shared:Routes}" />
         </BlazorWebView.RootComponents>
     </BlazorWebView>
-
 </ContentPage>
