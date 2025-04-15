@@ -66,7 +66,8 @@ namespace CleanBlazorWeb
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode()
                 .AddInteractiveWebAssemblyRenderMode()
-                .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
+                .AddAdditionalAssemblies(typeof(RazorMauiShared._Imports).Assembly,
+                                         typeof(Client._Imports).Assembly);
 
             // Add additional endpoints required by the Identity /Account Razor components.
             app.MapAdditionalIdentityEndpoints();
